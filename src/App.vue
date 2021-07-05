@@ -6,6 +6,7 @@
     <hr>
     <h2>这是动态组件</h2>
     <dynamic-component></dynamic-component>
+    <button @click="showTips">点击提示</button>
     <!-- <router-view/> -->
   </div>
 </template>
@@ -34,6 +35,9 @@ export default {
     },
     sum(a, b){
       console.log(123)
+    },
+    showTips(){
+      this.$message( {type:"success",message:"aaa",duration:3000} )
     }
   }
 }

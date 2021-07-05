@@ -21,7 +21,7 @@ export default {
       <div>
         <div>{context.data.attrs.nativeAttrs}</div>
         <ul {...{ attrs:context.data.attrs}} {...{ style:context.data.staticStyle}}>
-          {context.props.listData.map((item,index) => <li onClick={(index)=>context.listeners['select-change'](index)}>{item}</li>)}
+          {context.props.listData.map((item,index) => <li onClick={context.listeners['select-change'].bind(context,index)}>{item}</li>)}
         </ul>
       </div>
       )

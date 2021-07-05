@@ -31,7 +31,7 @@ export default {
     return (
       <div>
         <ul>
-          {this.listData.map((item,index) => <li key={index} onClick={(index)=>{this.deleteItem(index)}}>{item}</li>)}
+          {this.listData.map((item,index) => <li key={index} onClick={this.deleteItem.bind(this,index)}>{item}</li>)}
         </ul>
         <div>
             双向绑定------------{this.inputValue}
